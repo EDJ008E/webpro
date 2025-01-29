@@ -1,16 +1,22 @@
-import {  Sparkles, ArrowRight } from 'lucide-react';
+import { Sparkles, ArrowRight } from 'lucide-react';
 
 const About = () => {
   return (
-    <div className="py-20 relative" id="about-me">
-      {/* Background gradient effect */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/10 to-transparent pointer-events-none" />
+    <div className="py-20 relative bg-[#0B1120]" id="about-me">
+      {/* Background image with overlay */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center opacity-40" 
+        style={{
+          backgroundImage: 'url("https://images.unsplash.com/photo-1635830625698-3b9bd74671ca?auto=format&fit=crop&q=80&w=1920")',
+        }}
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0B1120] via-[#0B1120]/90 to-[#0B1120]" />
       
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="max-w-6xl mx-auto px-4 relative z-10">
           <div className="mb-12">
             <div className="flex items-center space-x-4">
               <h2 className="code-font text-2xl text-purple-400">{'</About Me>'}</h2>
-              <div className="h-px flex-grow bg-gradient-to-r from-purple-400 to-transparent" />
+              <div className="h-px flex-grow bg-gradient-to-r from-purple-400 " />
             </div>
           </div>
 
@@ -55,10 +61,8 @@ const About = () => {
             </div>
           </div>
         </div>
-
-  
-        </div>
       </div>
+    </div>
   );
 };
 
